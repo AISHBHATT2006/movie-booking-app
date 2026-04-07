@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Home from './Home';
 import Booking from './Booking';
@@ -9,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      {/* Routing concept used */}
+      {/* HashRouter is used instead of BrowserRouter for deployment support */}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
